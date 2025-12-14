@@ -40,7 +40,7 @@ salas_alocadas = {
 horarios = ["manha", "tarde"]
 
 # ---------------- Configuração da velocidade ----------------
-velocidade = 2  # segundos de pausa entre prints e visualizador
+velocidade = 0.5  # segundos de pausa entre prints e visualizador
 
 # Ordena disciplinas por número de alunos (do maior para o menor)
 disciplinas_ordenadas = sorted(disciplinas, key=lambda t: t["alunos"], reverse=True)
