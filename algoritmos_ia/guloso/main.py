@@ -39,6 +39,27 @@ salas_alocadas = {
 
 horarios = ["manha", "tarde"]
 
+""" 
+RESTRICOES:
+Turma: 
+    - Cada disciplina deve estar alocada em exatamente uma sala e em exatamente um horário. 
+    - Deve ter um professor atribuído. 
+Salas: 
+    - A sala escolhida deve ter capacidade suficiente para o número de alunos da turma. 
+    - Preferir a sala cuja capacidade seja mais próxima do tamanho da turma, evitando desperdício. 
+    - Uma sala não pode ter mais de uma disciplina no mesmo horário.
+    - Cada sala mantém registro dos horários ocupados, turmas e professores alocados. 
+Professor: 
+    - Um professor só pode dar uma disciplina por horário. 
+    - Priorizar professores que têm preferência pela disciplina. 
+    - Caso não haja professor com preferência disponível, escolher o professor disponível com menos turmas alocadas até o momento. 
+    - Cada professor mantém registro dos horários e das salas em que está alocado.
+    - Se nenhum professor estiver disponível em todos os horários, a turma fica como não alocada. 
+Horários: 
+    - Tentar primeiro o horário preferido da disciplina; se não for possível, tentar outros horários disponíveis. 
+    - Cada turma só pode ser alocada em um horário. 
+    - Cada sala e professor só podem ter uma disciplina por horário. 
+"""
 # ---------------- Configuração da velocidade ----------------
 velocidade = 0.5  # segundos de pausa entre prints e visualizador
 
